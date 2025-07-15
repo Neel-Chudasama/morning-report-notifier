@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv(dotenv_path="environmentvariables.env")
 
+# Triggering GitHub Action manually
+
+
 API_KEY = os.getenv("WEATHER_API_KEY")
 LOCATION = os.getenv("LOCATION")
 
