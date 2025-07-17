@@ -1,6 +1,3 @@
-import numpy as np 
-
-
 def wind_chill(temp_c, wind_mph):
     # Only valid for temps <= 10°C and wind >= 3 mph
     temp_f = temp_c * 9/5 + 32
