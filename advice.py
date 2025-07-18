@@ -15,6 +15,7 @@ def generate_advice(forecast):
     max_wind = forecast["day"]["maxwind_mph"]
     seven_pm_temp = forecast['hour'][19]['temp_c']
     precip = forecast['day']['totalprecip_mm']
+    max_temp_day = forecast['day']['maxtemp_c']
 
     avg_temp = wind_chill(avg_temp,max_wind)
 
@@ -22,13 +23,13 @@ def generate_advice(forecast):
 
     # Temperature-based advice
     if avg_temp >= 23:
-        advice.append("It’s gonna be sweaty the average temperature is going to be 23+ today. T-shirts and shorts if possible. At 7pm it will hit " + str(seven_pm_temp))
+        advice.append("It’s gonna be sweaty the average temperature is going to be 23+ today, with a max temp of " +str(max_temp_day)+". T-shirts and shorts if possible. At 7pm it will hit " + str(seven_pm_temp))
     elif avg_temp >= 18:
-        advice.append("Mild weather. Bring a light jumper because it might get cold. At 7pm it will hit " + str(seven_pm_temp))
+        advice.append("Mild weather, with a max temp " +str(max_temp_day)+". Bring a light jumper because it might get cold. At 7pm it will hit " + str(seven_pm_temp))
     elif avg_temp >= 10:
-        advice.append("Depending on what the season is this could be quite cold, definitely take a jacket out with you.  At 7pm it will hit " + str(seven_pm_temp))
+        advice.append("Depending on what the season is this could be quite cold, definitely take a jacket out with you, with a max temp " +str(max_temp_day)+".  At 7pm it will hit " + str(seven_pm_temp))
     else:
-        advice.append("It's proper cold man, take a jacket for sure and layer up. Hats and gloves for sure.")
+        advice.append("It's proper cold man with a max temp of " +str(max_temp_day)+", take a jacket for sure and layer up. Hats and gloves for sure.")
 
     # Rain-based advice
     if chance_of_rain >= 50:
