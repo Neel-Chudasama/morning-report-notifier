@@ -16,7 +16,6 @@ def generate_advice(forecast):
     seven_pm_temp = forecast['hour'][19]['temp_c']
     precip = forecast['day']['totalprecip_mm']
     max_temp_day = forecast['day']['maxtemp_c']
-
     avg_temp = wind_chill(avg_temp,max_wind)
 
     advice = []
@@ -34,6 +33,16 @@ def generate_advice(forecast):
     # Rain-based advice
     if chance_of_rain >= 50:
         advice.append("More than 50 percent chance of rain.")
+        if precip > 0 and precip <= 1:
+            advice.append("Light drizzle, barely wetting!")
+        elif precip > 1 and precip <= 2:
+            advice.append("Light rain and short bursts.	Up to you if you want to pack a raincoat.")
+        elif precip > 2 and precip <= 5:
+            advice.append("Moderate rain, Definitely worth packing a raincoat")
+        else:
+            advice.append("Steady rain. Definitely take a raincoat and umbrella")
+    elif chance_of_rain < 50 and chance_of_rain >= 30:
+        advice.append("Moderate a chance of rain.")
         if precip > 0 and precip <= 1:
             advice.append("Light drizzle, barely wetting!")
         elif precip > 1 and precip <= 2:
