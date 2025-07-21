@@ -25,8 +25,8 @@ def send_weather_notification(message):
     
 def send_tfl_notification(message):
     data = {
-        "token": os.environ["PUSHOVER_TOKEN"],
-        "user": os.environ["PUSHOVER_USER"],
+        "token": PUSHOVER_APP_TOKEN,
+        "user": PUSHOVER_USER_KEY,
         "message": message,
         "title": "Tube Status Update",
         "priority": 0
