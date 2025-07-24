@@ -19,7 +19,7 @@ The report is delivered to your phone every morning at **7:00 AM** using [Pushov
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 weather-notifier/
@@ -35,7 +35,7 @@ weather-notifier/
 └── 🔐 environmentvariables.env    # Secure configuration store
 ```
 
-### 📋 Component Overview
+### Component Overview
 
 | Component | Purpose | Technology |
 |-----------|---------|------------|
@@ -46,7 +46,7 @@ weather-notifier/
 | **notifier.py** | Cross-platform push notifications via Pushover | Pushover API |
 | **daily_run.py** | GitHub Actions integration layer | Python + YAML |
 
-### 🔄 Data Flow
+### Data Flow
 ```
 Weather API → weather.py → advice.py → main.py → notifier.py → 📱 Your Device
      ↑                                    ↑
