@@ -1,10 +1,10 @@
-# Morning Report ☀️🚇
+# Morning Report 
 
 This is a personal automation project that sends a **daily morning report** to your phone with:
 
 - 🌡️ The day's weather forecast (from [WeatherAPI.com](https://www.weatherapi.com/))
 - 👕 Clothing advice based on the temperature and weather conditions
-- 🚇 Live status updates for all London Underground (TfL) tube lines
+- 🚇 Live status updates for all London Underground (TfL) tube lines (from [TFLapi.com](https://api.tfl.gov.uk/))
 
 The report is delivered to your phone every morning at **7:00 AM** using [Pushover](https://pushover.net/).
 
