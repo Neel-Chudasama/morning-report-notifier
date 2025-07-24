@@ -4,13 +4,13 @@ This is a personal automation project that sends a **daily morning report** to y
 
 - 🌡️ The day's weather forecast (from [WeatherAPI.com](https://www.weatherapi.com/))
 - 👕 Clothing advice based on the temperature and weather conditions
-- 🚇 Live status updates for all London Underground (TfL) tube lines (from [TFLapi.com](https://api.tfl.gov.uk/))
+- 🚇 Live status updates for all London Underground (TfL) tube lines (from [api.tfl.gov.uk](https://api.tfl.gov.uk/))
 
 The report is delivered to your phone every morning at **7:00 AM** using [Pushover](https://pushover.net/).
 
 ---
 
-## 🛠️ Features
+## Features
 
 - Fetches **daily weather data** for London using WeatherAPI
 - Generates smart **clothing advice** (e.g. *"Take a jacket, it might rain!"*)
@@ -19,7 +19,7 @@ The report is delivered to your phone every morning at **7:00 AM** using [Pushov
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 weather-notifier/
 │
 ├── main.py # Main script that coordinates weather, advice, TfL, and notification
@@ -34,7 +34,7 @@ weather-notifier/
 └── environmentvariables.env # Stores environment variables (not committed)
 
 
-## 🔐 Secrets & Environment Variables
+## Secrets & Environment Variables
 
 The app uses the following environment variables (stored securely as GitHub Repository Secrets):
 
@@ -46,7 +46,7 @@ The app uses the following environment variables (stored securely as GitHub Repo
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 1. GitHub Actions runs the workflow every morning at 7:00 AM (London time)
 2. The workflow executes `daily_run.py`
@@ -58,14 +58,14 @@ The app uses the following environment variables (stored securely as GitHub Repo
 
 ---
 
-## 📥 Example Notification
+## Example Notification
 
-Good morning! ☀️
+Good morning!
 
 Today in London: 16°C, cloudy with a chance of rain.
-👕 Recommendation: Wear a light jacket and bring an umbrella.
+Recommendation: Wear a light jacket and bring an umbrella.
 
-🚇 Tube Status:
+Tube Status:
 
 Victoria: Good Service
 
@@ -73,22 +73,22 @@ Central: Minor delays
 
 Piccadilly: Part Closure ....
 
-## 📎 Future Improvements
+## Future Improvements
 
-- Add location-based weather and TfL updates
-- Add rainfall probability to improve advice
+- Add location-based TfL updates with commute to work estimation
+- Add alternative route suggestions if there are train cancellations or delays
 - Add daily email report option
 
 ---
 
-## 💡 Inspiration
+## Inspiration
 
 This project was inspired by the idea of getting actionable insights (like what to wear or which tube line to avoid) before even getting out of bed.
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
 **Neel Chudasama**  
 This is a personal project for learning and automation purposes.  
-Built with ❤️ using Python, GitHub Actions, and public APIs.
+Built with love using Python, GitHub Actions, and public APIs.
