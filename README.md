@@ -19,19 +19,40 @@ The report is delivered to your phone every morning at **7:00 AM** using [Pushov
 
 ---
 
-## Project Structure
+## 🏗️ Project Structure
+
+```
 weather-notifier/
 │
-├── main.py # Main script that coordinates weather, advice, TfL, and notification
-├── weather.py # Fetches weather forecast from WeatherAPI
-├── advice.py # Generates clothing advice based on the forecast
-├── tfl_status.py # Retrieves live status updates from TfL API
-├── notifier.py # Sends the final message to Pushover
-├── daily_run.py # Used by GitHub Actions to run the whole pipeline
-├── requirements.txt # Python dependencies
-├── .github/workflows/
-│ └── daily-notification.yml # GitHub Actions workflow to run daily at 7am
-└── environmentvariables.env # Stores environment variables (not committed)
+├── 🚀 main.py                     # Core orchestration engine
+├── 🌤️  weather.py                 # Weather data acquisition service
+├── 👔 advice.py                   # AI-driven clothing recommendation engine
+├── 🚇 tfl_status.py               # Transport for London API integration
+├── 📱 notifier.py                 # Multi-channel notification dispatcher
+├── ⚡ daily_run.py                # Automated pipeline executor
+├── 📦 requirements.txt            # Dependency management
+├── 🔧 .github/workflows/
+│   └── ⏰ daily-notification.yml  # CI/CD automation pipeline
+└── 🔐 environmentvariables.env    # Secure configuration store
+```
+
+### 📋 Component Overview
+
+| Component | Purpose | Technology |
+|-----------|---------|------------|
+| **main.py** | Central coordination hub that orchestrates all services | Python |
+| **weather.py** | Real-time weather data fetching via WeatherAPI | REST API |
+| **advice.py** | Intelligent clothing recommendations based on conditions | Python Logic |
+| **tfl_status.py** | Live TfL service status monitoring | TfL Unified API |
+| **notifier.py** | Cross-platform push notifications via Pushover | Pushover API |
+| **daily_run.py** | GitHub Actions integration layer | Python + YAML |
+
+### 🔄 Data Flow
+```
+Weather API → weather.py → advice.py → main.py → notifier.py → 📱 Your Device
+     ↑                                    ↑
+TfL API → tfl_status.py ──────────────────┘
+```
 
 
 ## Secrets & Environment Variables
