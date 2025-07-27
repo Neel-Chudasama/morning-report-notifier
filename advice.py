@@ -20,47 +20,40 @@ def generate_advice(forecast):
 
     advice = []
 
+    advice.append("Good morning King. ")
+
     # Temperature-based advice
     if avg_temp >= 23:
         advice.append("It’s gonna be sweaty the average temperature is going to be 23+ today, with a max temp of " +str(max_temp_day)+". T-shirts and shorts if possible. At 7pm it will hit " + str(seven_pm_temp))
     elif avg_temp >= 18:
-        advice.append("Mild weather, with a max temp " +str(max_temp_day)+". Bring a light jumper because it might get cold. At 7pm it will hit " + str(seven_pm_temp))
+        advice.append("It is going to be mild weather today, with a max temp of" +str(max_temp_day)+". Bring a light jumper because it might get cold later. At 7pm it will hit " + str(seven_pm_temp))
     elif avg_temp >= 10:
-        advice.append("Depending on what the season is this could be quite cold, definitely take a jacket out with you, with a max temp " +str(max_temp_day)+".  At 7pm it will hit " + str(seven_pm_temp))
+        advice.append("Depending on what the season is this could be quite cold, I definitely would take a jacket out with you, with a max temp " +str(max_temp_day)+".  At 7pm it will hit " + str(seven_pm_temp))
     else:
         advice.append("It's proper cold man with a max temp of " +str(max_temp_day)+", take a jacket for sure and layer up. Hats and gloves for sure.")
 
     # Rain-based advice
     if chance_of_rain >= 50:
-        advice.append("More than 50 percent chance of rain.")
+        advice.append("There is more than 50 percent chance of rain.")
         if precip > 0 and precip <= 1:
-            advice.append("Light drizzle, barely wetting!")
+            advice.append("But it is only a light drizzle, you will barely get wet!")
         elif precip > 1 and precip <= 2:
-            advice.append("Light rain and short bursts.	Up to you if you want to pack a raincoat.")
+            advice.append("Light rain and in short bursts.	Up to you if you want to pack a raincoat.")
         elif precip > 2 and precip <= 5:
-            advice.append("Moderate rain, Definitely worth packing a raincoat")
+            advice.append("There is moderate rain, so definitely worth packing a raincoat/umbrella.")
         else:
-            advice.append("Steady rain. Definitely take a raincoat and umbrella")
+            advice.append("Steady rain. Definitely take a raincoat and umbrella. ")
     elif chance_of_rain < 50 and chance_of_rain >= 30:
         advice.append("Moderate a chance of rain.")
         if precip > 0 and precip <= 1:
-            advice.append("Light drizzle, barely wetting!")
+            advice.append("But it is only a light drizzle, you will barely get wet!")
         elif precip > 1 and precip <= 2:
-            advice.append("Light rain and short bursts.	Up to you if you want to pack a raincoat.")
+            advice.append("Light rain and in short bursts.	Up to you if you want to pack a raincoat.")
         elif precip > 2 and precip <= 5:
-            advice.append("Moderate rain, Definitely worth packing a raincoat")
+            advice.append("There is moderate rain, so definitely worth packing a raincoat/umbrella.")
         else:
             advice.append("Steady rain. Definitely take a raincoat and umbrella")
-    elif "rain" in condition.lower():
-        advice.append("Rain expected. Be prepared!")
-        if precip > 0 and precip <= 1:
-            advice.append("Light drizzle, barely wetting!")
-        elif precip > 1 and precip <= 2:
-            advice.append("Light rain and short bursts.	Up to you if you want to pack a raincoat.")
-        elif precip > 2 and precip <= 5:
-            advice.append("Moderate rain, Definitely worth packing a raincoat")
-        else:
-            advice.append("Steady rain. Definitely take a raincoat and umbrella")
+
 
     # Weather condition-specific
     if "snow" in condition.lower():
@@ -68,6 +61,6 @@ def generate_advice(forecast):
     elif "sun" in condition.lower():
         advice.append("Sunny skies! Don’t forget sunglasses.")
     elif "thunder" in condition.lower():
-        advice.append("Thunderstorms possible — stay safe indoors if needed.")
+        advice.append("Thunderstorms are possible — stay safe indoors if needed.")
 
     return " ".join(advice)
