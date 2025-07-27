@@ -25,7 +25,7 @@ def get_weather_data():
     # Return the first forecast day (today)
     return data["forecast"]["forecastday"][0]
 
-TFL_URL = "https://api.tfl.gov.uk/line/mode/tube/status"
+TFL_URL = "https://api.tfl.gov.uk/line/mode/tube,overground,dlr/status"
 
 def get_tube_status():
     response = requests.get(TFL_URL)
