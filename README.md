@@ -24,9 +24,8 @@ The report is delivered to your phone every morning at **7:00 AM** using [Pushov
 ```
 weather-notifier/
 │
-├── 🌤️  weather.py                 # Weather data acquisition service
+├── 🌤️  weather.py                 # Weather and TFL data acquisition service
 ├── 👔 advice.py                   # AI-driven clothing recommendation engine
-├── 🚇 tfl_status.py               # Transport for London API integration
 ├── 📱 notifier.py                 # Multi-channel notification dispatcher
 ├── ⚡ daily_run.py                # Automated pipeline executor
 ├── 📦 requirements.txt            # Dependency management
