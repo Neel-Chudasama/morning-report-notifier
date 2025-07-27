@@ -39,7 +39,6 @@ weather-notifier/
 
 | Component | Purpose | Technology |
 |-----------|---------|------------|
-| **main.py** | Central coordination hub that orchestrates all services | Python |
 | **weather.py** | Real-time weather data fetching via WeatherAPI | REST API |
 | **advice.py** | Intelligent clothing recommendations based on conditions | Python Logic |
 | **tfl_status.py** | Live TfL service status monitoring | TfL Unified API |
