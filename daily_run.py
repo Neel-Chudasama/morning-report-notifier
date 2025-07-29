@@ -11,8 +11,7 @@ def main():
     send_tfl_notification(tube_status)
 
     start_lat, start_lon = get_user_location()
-    end_lat, end_lon = 51.5145,-0.0889
-    commute_advice = get_top_routes(start_lat, start_lon, end_lat, end_lon)
+    commute_advice = get_top_routes(start_lat, start_lon, end_lat= 51.5145, end_lon= -0.0889)
     send_commute_notification(commute_advice)
 
 
