@@ -43,7 +43,7 @@ weather-notifier/
 | Component | Purpose | Technology |
 |-----------|---------|------------|
 | **weather.py** | Real-time weather data fetching via WeatherAPI | REST API |
-| **advice.py** | Intelligent clothing recommendations based on conditions | Python Logic |
+| **advice.py** | Intelligent clothing recommendations based on conditions | Python Logic, Supabase API, Google Maps API |
 | **tfl_status.py** | Live TfL service status monitoring | TfL Unified API |
 | **notifier.py** | Cross-platform push notifications via Pushover | Pushover API |
 | **daily_run.py** | GitHub Actions integration layer | Python + YAML |
