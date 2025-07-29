@@ -1,6 +1,6 @@
-from data_acquisition import get_weather_data, get_tube_status
-from advice import generate_advice
-from notifier import send_weather_notification, send_tfl_notification  # Assuming this function exists
+from data_acquisition import get_weather_data, get_tube_status, get_user_location
+from advice import generate_advice, get_top_routes
+from notifier import send_weather_notification, send_tfl_notification, send_commute_notification # Assuming this function exists
 
 def main():
     forecast = get_weather_data()
@@ -9,7 +9,12 @@ def main():
 
     tube_status = get_tube_status()
     send_tfl_notification(tube_status)
-    
+
+    start_lat, start_lon = get_user_location()
+    end_lat, end_lon = 51.5145,-0.0889
+    commute_advice = get_top_routes(start_lat, start_lon, end_lat, end_lon)
+    send_commute_notification(commute_advice)
+
 
 if __name__ == "__main__":
     main()

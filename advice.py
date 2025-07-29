@@ -1,3 +1,11 @@
+import googlemaps
+import os
+from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path="environmentvariables.env")
+GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+
 def wind_chill(temp_c, wind_mph):
     # Only valid for temps <= 10°C and wind >= 3 mph
     temp_f = temp_c * 9/5 + 32
@@ -64,3 +72,46 @@ def generate_advice(forecast):
         advice.append("Thunderstorms are possible — stay safe indoors if needed.")
 
     return " ".join(advice)
+
+
+
+def get_top_routes(start_lat, start_lon, end_lat, end_lon, mode="transit", gmaps_key = GOOGLE_MAPS_API_KEY):
+    
+    gmaps = googlemaps.Client(key=gmaps_key)    
+
+    directions_result = gmaps.directions(
+        (start_lat, start_lon),
+        (end_lat, end_lon),
+        mode=mode,
+        departure_time=datetime.now(),
+        alternatives=True  
+    )
+
+    top_routes = []
+
+    for i, route in enumerate(directions_result[:3]):  # Limit to top 3
+        duration = route['legs'][0]['duration']['text']
+        steps = route['legs'][0]['steps']
+        
+        
+        summary = []
+        for step in steps:
+            if 'transit_details' in step:
+                line = step['transit_details']['line']['short_name']
+                vehicle = step['transit_details']['line']['vehicle']['type']
+                stop_from = step['transit_details']['departure_stop']['name']
+                stop_to = step['transit_details']['arrival_stop']['name']
+                summary.append(f"Take {vehicle} {line} from {stop_from} to {stop_to}")
+            else:
+                summary.append(step['html_instructions'])
+
+        route_info = {
+            "route_number": i + 1,
+            "duration": duration,
+            "summary": " → ".join(summary)
+        }
+
+        top_routes.append(route_info)
+
+    return top_routes
+
