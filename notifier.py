@@ -35,7 +35,7 @@ def send_tfl_notification(message):
     response = requests.post("https://api.pushover.net/1/messages.json", data=data)
     response.raise_for_status()
 
-def send_commute_notification(message):
+'''def send_commute_notification(message):
     data = {
         "token": PUSHOVER_APP_TOKEN,
         "user": PUSHOVER_USER_KEY,
@@ -44,4 +44,4 @@ def send_commute_notification(message):
         "priority": 0
     }
     response = requests.post("https://api.pushover.net/1/messages.json", data=data)
-    response.raise_for_status()
+    response.raise_for_status()'''

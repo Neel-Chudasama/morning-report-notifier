@@ -5,7 +5,7 @@ This is a personal automation project that sends a **daily morning report** to m
 - 🌡️ The day's weather forecast (from [WeatherAPI.com](https://www.weatherapi.com/))
 - 👕 Clothing advice based on the temperature and weather conditions
 - 🚇 Live status updates for all London Underground (TfL) tube lines (from [api.tfl.gov.uk](https://api.tfl.gov.uk/))
-- 🧭 Personalized commute time and suggested travel routes using your phone’s real-time location (via iOS Shortcuts + Supabase) and Google Maps Routes API (from [googlemapsapi.com](https://developers.google.com/maps/documentation/routes))
+- 🧭 Personalised commute time and suggested travel routes using your phone’s real-time location (via iOS Shortcuts + Supabase) and Google Maps Routes API (from [googlemapsapi.com](https://developers.google.com/maps/documentation/routes))
 
 The report is delivered to my phone every morning at 7:00 AM using Pushover.
 

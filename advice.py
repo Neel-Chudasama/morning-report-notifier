@@ -1,4 +1,4 @@
-import googlemaps
+#import googlemaps
 import os
 from datetime import datetime
 from dotenv import load_dotenv
@@ -75,7 +75,7 @@ def generate_advice(forecast):
 
 
 
-def get_top_routes(start_lat, start_lon, end_lat, end_lon, mode="transit", gmaps_key = GOOGLE_MAPS_API_KEY):
+'''def get_top_routes(start_lat, start_lon, end_lat, end_lon, mode="transit", gmaps_key = GOOGLE_MAPS_API_KEY):
     
     gmaps = googlemaps.Client(key=gmaps_key)    
 
@@ -113,5 +113,5 @@ def get_top_routes(start_lat, start_lon, end_lat, end_lon, mode="transit", gmaps
 
         top_routes.append(route_info)
 
-    return top_routes
+    return top_routes'''
 

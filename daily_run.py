@@ -10,9 +10,9 @@ def main():
     tube_status = get_tube_status()
     send_tfl_notification(tube_status)
 
-    start_lat, start_lon = get_user_location()
-    commute_advice = get_top_routes(start_lat, start_lon, end_lat= 51.5145, end_lon= -0.0889)
-    send_commute_notification(commute_advice)
+    #start_lat, start_lon = get_user_location()
+    #commute_advice = get_top_routes(start_lat, start_lon, end_lat= 51.5145, end_lon= -0.0889)
+    #send_commute_notification(commute_advice)
 
 
 if __name__ == "__main__":

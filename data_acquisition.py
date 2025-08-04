@@ -43,7 +43,7 @@ def get_tube_status():
     return "\n".join(status_messages)
 
 
-def get_user_location():
+'''def get_user_location():
     headers = {
         "apikey": SUPABASE_API_KEY,
         "Authorization": f"Bearer {SUPABASE_API_KEY}"
@@ -51,4 +51,4 @@ def get_user_location():
     url = f"{SUPABASE_URL}/rest/v1/user_location?user_id=eq.{SUPABASE_USER_ID}&select=lat,lon&order=updated_at.desc&limit=1"
     res = requests.get(url, headers=headers)
     data = res.json()
-    return data[0]["lat"], data[0]["lon"]
+    return data[0]["lat"], data[0]["lon"]'''
