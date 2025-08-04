@@ -34,7 +34,7 @@ def generate_advice(forecast):
     if avg_temp >= 23:
         advice.append("It’s gonna be sweaty the average temperature is going to be 23+ today, with a max temp of " +str(max_temp_day)+". T-shirts and shorts if possible. At 7pm it will hit " + str(seven_pm_temp))
     elif avg_temp >= 18:
-        advice.append("It is going to be mild weather today, with a max temp of" +str(max_temp_day)+". Bring a light jumper because it might get cold later. At 7pm it will hit " + str(seven_pm_temp))
+        advice.append("It is going to be mild weather today, with a max temp of " +str(max_temp_day)+". Bring a light jumper because it might get cold later. At 7pm it will hit " + str(seven_pm_temp))
     elif avg_temp >= 10:
         advice.append("Depending on what the season is this could be quite cold, I definitely would take a jacket out with you, with a max temp " +str(max_temp_day)+".  At 7pm it will hit " + str(seven_pm_temp))
     else:
