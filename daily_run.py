@@ -1,6 +1,6 @@
-from data_acquisition import get_weather_data, get_tube_status, get_user_location
-from advice import generate_advice, get_top_routes
-from notifier import send_weather_notification, send_tfl_notification, send_commute_notification # Assuming this function exists
+from data_acquisition import get_weather_data, get_tube_status
+from advice import generate_advice
+from notifier import send_weather_notification, send_tfl_notification # Assuming this function exists
 
 def main():
     forecast = get_weather_data()
