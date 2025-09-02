@@ -24,7 +24,7 @@ def generate_advice(forecast):
     seven_pm_temp = forecast['hour'][19]['temp_c']
     precip = forecast['day']['totalprecip_mm']
     max_temp_day = forecast['day']['maxtemp_c']
-    avg_temp = wind_chill(avg_temp,max_wind)
+    #feel_temp = wind_chill(avg_temp,max_wind)
 
     advice = []
 
