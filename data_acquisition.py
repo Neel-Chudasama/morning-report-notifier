@@ -9,9 +9,9 @@ API_KEY = os.getenv("WEATHER_API_KEY")
 LOCATION = os.getenv("LOCATION")
 
 #Supabase function
-SUPABASE_API_KEY = os.getenv("SUPABASE_API_KEY")
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_USER_ID = os.getenv("SUPABASE_USER_ID")
+#SUPABASE_API_KEY = os.getenv("SUPABASE_API_KEY")
+#SUPABASE_URL = os.getenv("SUPABASE_URL")
+#SUPABASE_USER_ID = os.getenv("SUPABASE_USER_ID")
 
 def get_weather_data():
     url = f"http://api.weatherapi.com/v1/forecast.json"

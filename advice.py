@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from typing import Dict, Any
 
 load_dotenv(dotenv_path="environmentvariables.env")
-GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+#GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
 def wind_chill(temp_c, wind_mph):
     # Only valid for temps <= 10°C and wind >= 3 mph
@@ -29,7 +29,7 @@ def generate_advice(forecast: Dict[str, Any]):
     Returns
     -------
     str
-        A personalized weather advice message.
+        A personalised weather advice message.
     """
     condition = forecast["day"]["condition"]["text"].casefold()
     avg_temp = forecast["day"]["avgtemp_c"]
