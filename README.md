@@ -98,7 +98,7 @@ Today in London: 16°C, cloudy with a chance of rain.
 Recommendation: Wear a light jacket and bring an umbrella.
 
 Tube Status:
-
+```
 Victoria: Good Service
 
 Central: Minor delays
@@ -106,6 +106,7 @@ Central: Minor delays
 Piccadilly: Part Closure ....
 
 Your commute time is ... Route 1 ...
+```
 
 ## Future Improvements
 
