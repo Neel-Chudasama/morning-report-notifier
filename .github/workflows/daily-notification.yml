@@ -3,6 +3,7 @@ name: Daily Weather Notification
 on:
   schedule:
     - cron: "0 6 * * *"  # 6:00 UTC = 7:00 AM UK time
+  workflow_dispatch:
 
 jobs:
   notify:
