@@ -89,7 +89,7 @@ def generate_advice(forecast: Dict[str, Any]):
     elif "sun" in condition:
         advice.append("Sunny skies! Don’t forget sunglasses.")
     elif "thunder" in condition:
-        advice.append("Thunderstorms possible — stay safe indoors if needed.")
+        advice.append("Thunderstorms possible - stay safe indoors if needed.")
 
     return " ".join(advice)
 

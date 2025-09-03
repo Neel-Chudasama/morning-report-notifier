@@ -6,7 +6,7 @@ load_dotenv(dotenv_path="environmentvariables.env")
 
 PUSHOVER_USER_KEY = os.getenv("PUSHOVER_USER_KEY")
 PUSHOVER_APP_TOKEN = os.getenv("PUSHOVER_APP_TOKEN")
-GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+#GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
 def send_weather_notification(message):
     if not PUSHOVER_USER_KEY or not PUSHOVER_APP_TOKEN:
