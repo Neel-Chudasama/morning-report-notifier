@@ -25,6 +25,5 @@ jobs:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
           PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
-          LAT: "51.5074"
-          LON: "-0.1278"
+          LOCATION : ${{secrets.LOCATION}}
 
